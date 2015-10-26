@@ -1,168 +1,291 @@
-/*
- * Globals
- */
+  /*
+   * Globals
+   */
 
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
+  /* Links */
 
-/* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
-}
-
-
-/*
- * Base structure
- */
-
-html,
-body {
-  height: 100%;
-  background-color: #29e493;
-}
-body {
-  color: #fff;
-  text-align: center;
-  /*text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
-}
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
-          /*box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* Padding for spacing */
-.inner {
-  padding: 30px;
-}
-
-
-/*
- * Header
- */
-
- /* ********************************************************************* 
- Removing header code from default cover template. This is not required for now.
-*************************************************************************
-
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.masthead-nav > li {
-  display: inline-block;
-}
-.masthead-nav > li + li {
-  margin-left: 20px;
-}
-.masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;  // IE8 proofing 
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
-}
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
-}
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
+  a,
+  a:focus,
+  a:hover {
+    color: #fff;
   }
-  .masthead-nav {
-    float: right;
+
+  /* Custom default button */
+  .btn-default,
+  .btn-default:hover,
+  .btn-default:focus {
+    color: #333;
+    text-shadow: none; /* Prevent inheritence from `body` */
+    background-color: #fff;
+    border: 1px solid #fff;
   }
-}
-*/
 
-/*
- * Cover
- */
+  /*
+   * Base structure
+   */
 
-.cover {
-  padding: 0 20px;
-}
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-
-/*
- * Footer
- */
-
-.mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
-}
-
-
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
+  html,
+  body {
+    height: 100%;
+      background-color: #29e493;
+      -webkit-animation-name: animatingColors; /* Chrome, Safari, Opera */
+      -webkit-animation-duration: 5s;  /* Chrome, Safari, Opera */
+      animation-name: animatingColors;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
   }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
+
+  /* Animated Colors*/
+  @keyframes animatingColors {
+      0%   {background-color: #3FC380;}
+      25%  {background-color: #2ECC71;}
+      50%  {background-color: #00B16A;}
+      75%  {background-color: #16A085;}
+      100% {background-color: #29e493;}
   }
-  /* Start the vertical centering */
+
+  body {
+    color: #fff;
+    text-align: center;
+    /*text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
+  }
+
+  /* Extra markup and styles for table-esque vertical and horizontal centering */
+  .site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+            /*box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+  }
   .site-wrapper-inner {
-    vertical-align: middle;
+    display: table-cell;
+    vertical-align: top;
   }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    margin-right: auto;
+    margin-left: auto;
   }
-}
 
-@media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
+  /* Padding for spacing */
+  .inner {
+    padding: 30px;
   }
-}
+
+  /*
+   * Header
+   */
+
+   /* *********************************************************************
+   Removing header code from default cover template. This is not required for now.
+  *************************************************************************
+
+  .masthead-brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .masthead-nav > li {
+    display: inline-block;
+  }
+  .masthead-nav > li + li {
+    margin-left: 20px;
+  }
+  .masthead-nav > li > a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;  // IE8 proofing
+    color: rgba(255,255,255,.75);
+    border-bottom: 2px solid transparent;
+  }
+  .masthead-nav > li > a:hover,
+  .masthead-nav > li > a:focus {
+    background-color: transparent;
+    border-bottom-color: #a9a9a9;
+    border-bottom-color: rgba(255,255,255,.25);
+  }
+  .masthead-nav > .active > a,
+  .masthead-nav > .active > a:hover,
+  .masthead-nav > .active > a:focus {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    .masthead-brand {
+      float: left;
+    }
+    .masthead-nav {
+      float: right;
+    }
+  }
+  */
+
+  /*
+   * Cover
+   */
+
+  .cover {
+    padding: 0 20px;
+  }
+  
+  /* Icon Wrapper */
+  .icon-button {
+  	background-color: none;
+  	border-radius: 5rem;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-size: 2rem;
+    width: 5rem;
+  	height: 5rem;
+  	line-height: 5rem;
+  	margin: 0 5px;
+  	position: relative;
+  	text-align: center;
+  	-webkit-user-select: none;
+  	   -moz-user-select: none;
+  	    -ms-user-select: none;
+  	        user-select: none;
+  }
+
+  /* Circle over social media icon*/
+  .icon-button span {
+  	border-radius: 0;
+  	display: block;
+  	height: 0;
+  	left: 50%;
+  	margin: 0;
+  	position: absolute;
+  	top: 50%;
+  	width: 0;
+  }
+  .icon-button:hover span {
+  	width: 5rem;
+  	height: 5rem;
+  	border-radius: 10rem;
+  	margin: -2.5rem;
+  }
+
+  /* Icons */
+  .icon-button i {
+  	background: none;
+  	color: white;
+  	height: 5rem;
+  	left: 0;
+  	line-height: 5rem;
+  	position: absolute;
+  	top: 0;
+  	width: 5rem;
+  	z-index: 10;
+  }
+
+  .twitter span {
+  	background-color: #4099ff;
+  }
+  .linkedin span {
+  	background-color: #0077B5;
+  }
+  .medium span {
+  	background-color: #000000;
+  }
+  .github span {
+  	background-color: #151013;
+  }
+
+  .icon-button .icon-twitter {
+  	color: #4099ff;
+  }
+  .icon-button .icon-linkedin {
+  	color: #0077B5;
+  }
+  .icon-button .icon-medium {
+  	color: #000000;
+  }
+  .icon-button .icon-github {
+  	color: #151013;
+  }
+
+  .icon-button:hover .icon-twitter,
+  .icon-button:hover .icon-linkedin,
+  .icon-button:hover .icon-medium,
+  .icon-button:hover .icon-github {
+  	color: white;
+  }
+/*
+  Following is not working properly
+*/
+  @media all and (max-width: 680px) {
+    .icon-button {
+      border-radius: 3rem;
+      font-size: 1.5rem;
+      height: 3rem;
+      line-height: 2.5rem;
+      width: 3rem;
+    }
+
+    .icon-button:hover span {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 3rem;
+      margin: -0.8rem;
+    }
+
+    /* Icons */
+    .icon-button i {
+  	  height: 3rem;
+  	  line-height: 4rem;
+  	  width: 4.2rem;
+    }
+    body {
+
+  	  padding: 10px;
+    }
+  }
+
+  /*
+   * Footer
+   */
+
+  .mastfoot {
+    color: #999; /* IE8 proofing */
+    color: rgba(255,255,255,.5);
+  }
+
+
+  /*
+   * Affix and center
+   */
+
+  @media (min-width: 768px) {
+    /* Pull out the header and footer */
+    .masthead {
+      position: fixed;
+      top: 0;
+    }
+    .mastfoot {
+      position: fixed;
+      bottom: 0;
+    }
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+      vertical-align: middle;
+    }
+    /* Handle the widths */
+    .masthead,
+    .mastfoot,
+    .cover-container {
+      width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+  }
+
+  @media (min-width: 992px) {
+    .masthead,
+    .mastfoot,
+    .cover-container {
+      width: 700px;
+    }
+  }
